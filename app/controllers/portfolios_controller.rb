@@ -1,78 +1,77 @@
-class PortfoliosController < ApplicationController
-  layout 'portfolio'
-  
-  def index
-    @portfolio_items = Portfolio.all
-  end
+    class PortfoliosController < ApplicationController
+      before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+      layout 'portfolio'
 
-  def angular
-    @angular_portfolio_items = Portfolio.angular
-
-  end
-  
-  def new
-    @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
-  end 
-
-  def create
-     @portfolio_item = Portfolio.new(portfolio_params )
-
-    respond_to do |format|
-      if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
-        #format.json { render :show, status: :created, location: @blog }
-      else
-        format.html { render :new }
-        #format.json { render json: @blog.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def edit
-     @portfolio_item = Portfolio.find(params[:id])
-    
-  end
-  def update
-    @portfolio_item = Portfolio.find(params[:id])
-    respond_to do |format|
       
-      if @portfolio_item.update(portfolio_params )
-
-      #if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
-        format.html { redirect_to portfolios_path, notice: 'The record successfully updated.' }
-      else
-        format.html { render :edit}
+      def index
+        @portfolio_items = Portfolio.all
       end
-    end
-  end
 
-  def show
-    @portfolio_item = Portfolio.find(params[:id])
-  end
+      def angular
+        @angular_portfolio_items = Portfolio.angular
+      end
+      
+      def new
+        @portfolio_item = Portfolio.new
+        3.times { @portfolio_item.technologies.build }
+      end 
 
-  def destroy
-    # Perform look up
-    @portfolio_item = Portfolio.find(params[:id])
-    # Destroy the record, not delete
-    @portfolio_item.destroy
+      def create
+         @portfolio_item = Portfolio.new(portfolio_params )
 
-    #Redirect 
-    respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
-      format.json { head :no_content }
-    end
-  end
+        respond_to do |format|
+          if @portfolio_item.save
+            format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
+            #format.json { render :show, status: :created, location: @blog }
+          else
+            format.html { render :new }
+            #format.json { render json: @blog.errors, status: :unprocessable_entity }
+          end
+        end
+      end
 
-  private
+      def edit
+      end
 
-  def portfolio_params
-    params.require(:portfolio).permit(:title, 
-                                      :subtitle,
-                                      :body, 
-                                      technology_attributes: [:name])
-  end 
+      def update
+         
+        respond_to do |format|
+          
+          if @portfolio_item.update(portfolio_params )
 
+          #if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
+            format.html { redirect_to portfolios_path, notice: 'The record successfully updated.' }
+          else
+            format.html { render :edit}
+          end
+        end
+      end
+
+      def show
+         
+      end
+
+      def destroy
+         @portfolio_item.destroy
+      end
+
+        #Redirect 
+        respond_to do |format|
+          format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
+          format.json { head :no_content }
+        end
+      end
+
+      private
+
+      def portfolio_params
+        params.require(:portfolio).permit(:title, 
+                                          :subtitle,
+                                          :body, 
+                                          technology_attributes: [:name])
+      end 
+      def set_portfolio_item
+  @portfolio_item = Portfolio.find(params[:id])
+   
+      
 end 
-
- 
