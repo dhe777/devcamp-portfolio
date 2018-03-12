@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <title><%= @page_title%></title>
+    <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
@@ -18,10 +17,9 @@
     <%= render "shared/nav", location: 'top' %>
 
     <%= login_helper %>
-     
+
     <%= yield %>
 
     <%= source_helper("application") %>
-    
   </body>
 </html>
