@@ -17,7 +17,7 @@
       end 
 
       def create
-         @portfolio_item = Portfolio.new(portfolio_params )
+         @portfolio_item = Portfolio.new(portfolio_params)
 
         respond_to do |format|
           if @portfolio_item.save
@@ -37,7 +37,7 @@
          
         respond_to do |format|
           
-          if @portfolio_item.update(portfolio_params )
+          if @portfolio_item.update(portfolio_params)
 
           #if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
             format.html { redirect_to portfolios_path, notice: 'The record successfully updated.' }
@@ -53,7 +53,7 @@
 
       def destroy
          @portfolio_item.destroy
-      end
+      
 
         #Redirect 
         respond_to do |format|
@@ -70,8 +70,8 @@
                                           :body, 
                                           technology_attributes: [:name])
       end 
-      def set_portfolio_item
-  @portfolio_item = Portfolio.find(params[:id])
-   
       
+    def set_portfolio_item
+      @portfolio_item = Portfolio.find(params[:id])
+      end   
 end 
