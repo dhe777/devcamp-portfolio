@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    DevcampViewTool::Renderer.copyright 'Jordan Hudgens', 'All rights reserved'
+    JiraDiverseViewTool::Renderer.copyright 'Dennis Henry Espinoza', 'All Rights Reserved'
   end
 end
