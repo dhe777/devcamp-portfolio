@@ -1,4 +1,4 @@
- 
+
  
 source 'https://rubygems.org'
 
@@ -62,4 +62,3 @@ gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jira_diverse_view_tool', git: 'https://github.com/dhe777/Jire_Diverse_View_Tool'
  
->>>>>>> master
