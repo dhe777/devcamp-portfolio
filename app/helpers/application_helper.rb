@@ -1,3 +1,4 @@
+ 
 module ApplicationHelper
   def login_helper
     if current_user.is_a?(GuestUser)
@@ -20,3 +21,4 @@ module ApplicationHelper
     JiraDiverseViewTool::Renderer.copyright 'Dennis Henry Espinoza', 'All Rights Reserved'
   end
 end
+ 

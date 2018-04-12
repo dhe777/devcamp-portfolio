@@ -4,9 +4,10 @@ default: &default
   encoding: unicode
   pool: 5
   timeout: 5000
-  host: <%= ENV['DATA_DB_HOST'] %>
-  username: <%= ENV['DATA_DB_USER'] %>
-  password: <%= ENV['DATA_DB_PASS'] %>
+  host: localhost
+
+  username: railsdevuser
+  password: Jael1324$
 development:
   <<: *default
   database: development
