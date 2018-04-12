@@ -1,3 +1,4 @@
+ 
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -57,4 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'friendly_id', '~> 5.1.0' 
 gem 'devise', '~> 4.4', '>= 4.4.1'
-gem 'petergate', '~> 1.8', '>= 1.8.1'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jira_diverse_view_tool', git: 'https://github.com/dhe777/Jire_Diverse_View_Tool'
+ 

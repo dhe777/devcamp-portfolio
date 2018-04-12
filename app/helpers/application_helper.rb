@@ -1,3 +1,4 @@
+
 module ApplicationHelper
   def login_helper
     if current_user.is_a?(GuestUser)
@@ -17,6 +18,7 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    DevcampViewTool::Renderer.copyright 'Jordan Hudgens', 'All rights reserved'
+    JiraDiverseViewTool::Renderer.copyright 'Dennis Espinoza', 'All rights reserved'
   end
 end
+ 
