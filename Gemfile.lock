@@ -239,11 +239,8 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jira_diverse_view_tool!
-<<<<<<< HEAD
-=======
   jquery-rails (~> 4.3, >= 4.3.1)
   kaminari (~> 1.1, >= 1.1.1)
->>>>>>> design
   listen (>= 3.0.5, < 3.2)
   petergate (~> 1.8, >= 1.8.1)
   pg (~> 0.18)
