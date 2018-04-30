@@ -65,3 +65,7 @@ gem 'jira_diverse_view_tool', git: 'https://github.com/dhe777/Jire_Diverse_View_
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4' 
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'dotenv', '~> 2.4'
