@@ -12,7 +12,7 @@
       Portfolio.find(value[:id]).update(position: value[:position])
     end
 
-    render nothing: true
+    render body: nil
   end
 
   def angular
