@@ -11,33 +11,35 @@
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    
 
-  <body>
+</head>
+
+<body>
   
-    <%= render 'shared/blog_nav' %>
-    <%= render 'shared/blog_masthead' %>
+  <%= render 'shared/blog_nav' %>
+  <%= render 'shared/blog_masthead' %>
 
 
 
-    <!-- start of blog header -->
+  <!-- start of blog header -->
    
     
-    <div class="container">
+  <div class="container">
 
-      <div class="row">
+    <div class="row">
  
-        <%= yield %>
+    <%= yield %>
         
-        <%= render 'shared/blog_sidebar' %>
+    <%= render 'shared/blog_sidebar' %>
         
-      </div>
+    </div>
     
-      <%= render 'shared/blog_footer' %>
+    <%= render 'shared/blog_footer' %>
 
-      <%= alerts %>
+    <%= alerts %>
       
-      <%= source_helper("blog") %>
+    <%= source_helper("blog") %>
       
     </div>
   </body>
