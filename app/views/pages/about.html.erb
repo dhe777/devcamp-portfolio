@@ -1,21 +1,36 @@
-
 <div class="app-card-container">
-  <h1>About Me</h1>
-	<div class="card"
-	
-	    
+  <div class="card">
+    <h1>About Me</h1>
 
-		<hr>
+    <hr>
 
-			<div class="row">
-				<div class="col-md-5">
-				<%= image_tag "profile.jpg", width:300, alt: "profile image" %>
-			    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-				<div class="col-md-7">
-				  <p>A decade plus of experience in diverse technologies focusing on application performance management and monitoring in the last decade. My experience in I.T. spans rack and stack, cabling and connectors, server implementation, system administration, virtual machines and training on use of application performance software. 
-			      <hr>
-			  	  I have extensive experience writing process and procedure spanning the entirety of the application lifecycle. My experience includes the creation of business effective performance SLAs and training business analysts to do the same. While performing the previous functions I have also served as Tier 3 support </p>
+      <div class="col-md-8">
+         <p>A decade plus of experience in diverse technologies focusing on application performance management and monitoring in the last decade. My experience in I.T. spans rack and stack, cabling and connectors, server implementation, system administration, virtual machines and training on use of application performance software.
+         </p>
+
+         <p>I have extensive experience writing process and procedure spanning the entirety of the application lifecycle. My experience includes the creation of business effective performance SLAs and training business analysts to do the same. While performing the previous functions I have also served as Tier 3 support.
+         </p>
 
         <p>
           <button
@@ -67,6 +82,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
