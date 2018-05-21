@@ -26,16 +26,30 @@ a:hover {
 /*
  * Base structure
  */
+ 
 
 html,
 body {
   height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:  18px;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+
 }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Lato', sans-serif;
+}
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -166,7 +180,7 @@ body {
  */
 
 .card-block {
-  color: black;
+  color: white;
   text-align: left;
 }
 
@@ -174,7 +188,7 @@ body {
   color: black;
 }
 
-.register-text {
+.register-text { 
   text-align: right;
 }
 
@@ -219,4 +233,34 @@ body {
 
 .tech-news a {
   color: green;
+}
+
+.app-card-container {
+   text-align: left;
+
+   
+}
+
+.card {
+  background-color: black;
+  border: 1px solid white;
+  padding: 2rem;
+  color:white
+   
+}
+
+.app-card-container a {
+  color: green;
+
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skill {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }

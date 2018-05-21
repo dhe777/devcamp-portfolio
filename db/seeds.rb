@@ -10,12 +10,19 @@ puts "1 Admin user created"
 
 User.create!(
   email: "test2@test.com",
+
   password: "asdfasdf",
   password_confirmation: "asdfasdf",
   name: "Regular User",
 )
 
 
+
+
+  password: "Jael1324$",
+  password_confirmation: "Jael1324$",
+  name: "Regular User",
+)
 
 
 3.times do |topic|

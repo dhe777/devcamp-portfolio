@@ -9,7 +9,11 @@
     <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+
     <meta name="keywords" content="<%= @seo_keywords %>" />
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>    
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -23,12 +27,13 @@
           
           <%= video_tag(
 
+
               'vid.mp4',
               id: 'background',
               autoplay: true,
               loop: true,
               muted: true,
-              poster: 'background.jpg'
+              poster: 'background.jpg' 
             )
       
           %>
@@ -37,15 +42,10 @@
   
           <%= yield %>
  
-           
- 
           <%= render "shared/application_footer" %>
 
           <%= alerts %>
- 
-          
-          <%= source_helper("application") %>
-          
+
         </div>
       </div>
     </div>        
