@@ -9,6 +9,7 @@
     <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
 
+ 
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
@@ -27,13 +28,15 @@
           
           <%= video_tag(
 
-
+ 
               'vid.mp4',
               id: 'background',
               autoplay: true,
               loop: true,
               muted: true,
+ 
               poster: 'background.jpg' 
+
             )
       
           %>
@@ -41,11 +44,20 @@
           <%= render "shared/application_nav" %>
   
           <%= yield %>
- 
-          <%= render "shared/application_footer" %>
 
           <%= alerts %>
 
+ 
+           
+ 
+          <%= render "shared/application_footer" %>
+
+           
+ 
+          
+          <%= source_helper("application") %>
+          
+ 
         </div>
       </div>
     </div>        

@@ -1,3 +1,4 @@
+ 
 User.create!(
   email: "test@test.com",
   password: "Jael1324$",
@@ -25,6 +26,7 @@ User.create!(
 )
 
 
+ 
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
