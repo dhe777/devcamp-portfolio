@@ -18,15 +18,6 @@ User.create!(
 )
 
 
-
-
-  password: "Jael1324$",
-  password_confirmation: "Jael1324$",
-  name: "Regular User",
-)
-
-
- 
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
