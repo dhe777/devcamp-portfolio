@@ -47,7 +47,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (8.2.0)
+    autoprefixer-rails (8.5.0)
       execjs
     aws-partitions (1.82.0)
     aws-sdk-core (3.20.2)
@@ -64,7 +64,7 @@ GEM
     aws-sigv4 (1.0.2)
     bcrypt (3.1.11)
     bindex (0.5.0)
-    bootstrap (4.0.0)
+    bootstrap (4.1.1)
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
@@ -297,7 +297,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0)
+  bootstrap (~> 4.1.0)
   byebug
   capybara (~> 2.13)
   carrierwave (~> 1.2, >= 1.2.2)
@@ -339,4 +339,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
